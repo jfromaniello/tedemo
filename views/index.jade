@@ -1,0 +1,32 @@
+doctype 5
+html(lang="en")
+  head
+    title product list demo
+    script(src="/jam/require.js")
+    
+    //- there is a problem when using data-main attribute in the built solution.
+    //- I changed main from require to define and added this thing:
+    script
+      require(["/main.js"]);
+
+  body
+    h1 Products
+    .current-products
+      h2 Current Products
+      table#product-list
+        thead
+          tr
+            th name
+            th price
+        tbody
+          each product in products
+            name = product.name
+            price = product.price
+            include includes/product-line
+
+
+    .create-product
+      h2 Create a new product
+      input(id="product-name", type="text", placeholder="product name") 
+      input(id="product-price", type="text", placeholder="product price") 
+      input(id="create-product", type="button", value="create") 
