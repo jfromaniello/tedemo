@@ -16,7 +16,6 @@
     "email": "jfromaniello@gmail.com",
     "web": "http://joseoncode.com"
   },
-  "main": "lib/zq.js",
   "jam": {
     "packageDir": "public/jam",
     "baseUrl": "public",
